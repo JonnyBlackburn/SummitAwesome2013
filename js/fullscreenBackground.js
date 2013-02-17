@@ -32,7 +32,7 @@
         "img/backgrounds/background6_sm.png"
     );
 
-    var threshold = 650;
+    var threshold = 750;
 
     var imageIndex = Math.floor(Math.random()*($(window).width() < threshold ? pngArray.length : gifArray.length));
 
