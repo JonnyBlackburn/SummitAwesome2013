@@ -34,12 +34,25 @@
 
     var threshold = 750;
 
-    var imageIndex = Math.floor(Math.random()*($(window).width() < threshold ? pngArray.length : gifArray.length));
+    var gifIndex = Math.floor(Math.random()*gifArray.length);
+    var pngIndex = Math.floor(Math.random()*pngArray.length);
+
+    if(gifIndex == pngIndex) {
+        if(gifIndex < gifArray.length + 1 && gifIndex != 0) {
+            gifIndex--;
+        }
+        else if(gifIndex != gifArray.length && gifIndex >= 0) {
+            gifIndex++;
+        }
+        else {
+            gifIndex = Math.floor(Math.random()*gifArray.length);
+        }
+    }
 
     $.fn.fullscreenBackground = function (options) {
         if(options) { $.extend(optionsArr, options ); };
 
-        $("#bckgrnd").attr("src", $(window).width() < threshold ? pngArray[imageIndex] : gifArray[imageIndex]);
+        $("#bckgrnd").attr("src", $(window).width() < threshold ? pngArray[pngIndex] : gifArray[gifIndex]);
 
         this.each(function () {
             parentElement = this;
@@ -92,7 +105,7 @@
                 var leftMargin = ((newWidth - windowWidth) / 2) * -1;
             }
 
-            windowWidth < threshold ? $(this).attr("src", pngArray[imageIndex]) : $(this).attr("src", gifArray[imageIndex]);
+            windowWidth < threshold ? $(this).attr("src", pngArray[pngIndex]) : $(this).attr("src", gifArray[gifIndex]);
 
             $(this).css({
                 height: newHeight + "px",
