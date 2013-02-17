@@ -1,0 +1,487 @@
+/*----------------------------------------------------------------------------------------------------------------*\
+    RESET
+\*----------------------------------------------------------------------------------------------------------------*/
+/*
+RESET
+DEFAULT TEXT
+BUTTONS
+FORM ELEMENTS
+PAGE CONTAINERS
+MEDIA QUERIES
+*/
+
+a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, dl, 
+dt, em, fieldset, figcaption, figure, footer, form, header, hgroup, h1, h2, h3, h4, h5, h6, html, i, iframe, img, 
+ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, 
+sup, table, tbody, td, th, thead, time, tfoot, tr, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* ----- HTML 5 ----- */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+abbr[title], dfn[title] { 
+    border-bottom: 1px dotted #ccc; 
+    cursor: help;
+}
+
+/* ----- Typography ----- */
+strong, mark, b {
+    font-weight: bold; 
+    font-style: inherit;
+}
+
+em, i, cite, q, address, dfn, var {
+    font-style: italic; 
+    font-weight: inherit;
+}
+
+small {
+    font-size: 0.75em;
+}
+
+del, s { 
+    text-decoration: line-through;
+}
+
+ins {
+    border-bottom: 1px solid #ccc; 
+	text-decoration: none;
+}
+
+pre, code, kbd, samp {
+    font-family: monospace, sans-serif;
+}
+
+pre {
+    padding: 15px;
+    white-space: pre; 
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+}
+
+/* ----- Quotes ----- */
+blockquote, q {
+    quotes: "" "";
+}
+
+blockquote:before, blockquote:after, q:before, q:after { 
+    content: "";
+}
+
+/* ----- Links, Images & Embedded content----- */
+img {
+    width: 100%;
+    height: auto;
+}
+
+:focus {
+    outline: 0;
+}
+
+.embedContainer {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; 
+    overflow: hidden;   
+    position: relative;
+}
+
+.embedContainer iframe,
+.embedContainer object,
+.embedContainer embed {
+    width: 100%;
+    height: 100%;   
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ----- Forms ----- */
+input {
+	line-height: 1em;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+/* ----- Tables ----- */
+table, th, td { 
+	border-collapse: collapse;
+    border-spacing: 0;
+    vertical-align: top;
+    text-align: left; 
+    font-weight: normal;
+}
+
+/* ----- Cursors ----- */
+a, button, select {
+    cursor: pointer;
+}
+
+input, textarea {
+    cursor: text;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    cursor: pointer;
+}
+
+/* ----- Other ----- */
+.clear {
+    float: none;
+    clear: both;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------*\
+    DEFAULT TEXT
+\*----------------------------------------------------------------------------------------------------------------*/
+body {
+    background: #000;
+    
+    color: #ddd;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-size: 1.35em;
+    line-height: 1.5em;
+    
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Arimo', sans-serif;
+    color: #EDEDED;
+    font-weight: bold;
+}
+
+h1, .h1 {
+    font-size: 2.25em;
+    line-height: 1.5em;
+}
+
+h2, .h2 {
+    font-size: 1.5em;
+    line-height: 1em;
+}
+
+h3, .h3 {
+    font-size: 1.25em;
+    line-height: 1.2em;
+}
+
+h4, .h4 {
+    font-size: 1.125em;
+    line-height: 1.333em;
+}
+
+h5, .h5 {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+h6, .h6 {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+a {
+    color: #44BF22;
+    text-decoration: none;
+    
+    -webkit-transition: all 0.2s ease-in;  
+    -moz-transition: all 0.2s ease-in;  
+    -ms-transition: all 0.2s ease-in;  
+    -o-transition: all 0.2s ease-in;  
+    transition: all 0.2s ease-in; 
+}
+
+a:hover, a.selected {
+    color: #5FDE49;
+}
+
+::selection,
+::-moz-selection {
+    background:#76AD6F;
+}
+
+/*----------------------------------------------------------------------------------------------------------------*\
+    BUTTONS
+\*----------------------------------------------------------------------------------------------------------------*/
+button, 
+.button {
+	padding: 5px 10px;
+	border: 1px solid #077BA8;
+	display: inline-block;
+	
+	background: #2290BF;
+	
+	font-size: 1em;
+	line-height: 1em;
+	color: #fff;
+	
+	-webkit-transition: all 0.2s ease-in;  
+    -moz-transition: all 0.2s ease-in;  
+    -ms-transition: all 0.2s ease-in;  
+    -o-transition: all 0.2s ease-in;  
+    transition: all 0.2s ease-in;
+}
+
+button:hover, 
+.button:hover {
+    background: #49B1DE;
+    
+    color: #fff;
+}
+
+button.small, 
+.button.small {
+    font-size: 0.7em;
+    line-height: 1em;
+}
+
+button.large, 
+.button.large {
+    font-size: 1.3em;
+    line-height: 1em;
+}
+
+/*----------------------------------------------------------------------------------------------------------------*\
+    TABS
+\*----------------------------------------------------------------------------------------------------------------*/
+.tabs .tabControls {
+    list-style: none;
+}
+
+.tabs .tabControls li {
+    margin-right: 5px;
+    display: block;
+
+    position: relative;
+    top: 1px;
+}
+
+.tabs .tabControls a {
+    padding: 10px;
+    display: block;
+
+    color: #44BF22;
+    text-decoration: none;
+}
+
+.tabs .tabControls a.selected,
+.tabs .tabControls a:hover {
+    color: #5FDE49;
+}
+
+/*----------------------------------------------------------------------------------------------------------------*\
+    FORM ELEMENTS
+\*----------------------------------------------------------------------------------------------------------------*/
+label {
+	width: 100%;
+	display: block;
+}
+
+input, 
+textarea {
+	width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    display: block;
+    
+    background: #f5f5f5;
+}
+
+textarea {
+	height: 150px;
+}
+
+input:focus, 
+textarea:focus {
+    background: #fff;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	width: auto;
+	padding: 0;
+	border: 0;
+	display: inline-block;
+}
+
+select {
+	margin-bottom: 10px;
+	display: block;
+}
+
+fieldset, legend {
+    border: 0;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------*\
+    PAGE CONTAINERS
+\*----------------------------------------------------------------------------------------------------------------*/
+.content {
+    background-color: rgba(20, 20, 20, 0.35);
+    max-width: 980px;
+    padding: 10px 20px;
+    margin: 0 20px;
+
+    min-height: 350px;
+    min-width: 350px;
+
+    border-radius: 15px;
+
+    z-index: 2;
+    position: relative;
+
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+.content:hover {
+    background-color: rgba(20, 20, 20, 0.75);
+    box-shadow: 6px 6px 5px rgba(18, 18, 18, 0.3);
+}
+
+.row {
+    width: 100%;
+    padding: 20px 0;
+    
+    background: #fff;
+    
+    position: relative;
+}
+
+.row [class*="column-"] {
+    width: 100%;
+    min-height: 1px;
+}
+
+.row:after,
+.content:after {
+    height: 0;
+    display: block;
+    content: "";
+    visibility: hidden;
+    clear: both;
+}
+
+.row [class*="column-"]:last-child {
+    margin-right: 0;
+}
+
+.hideMobile,
+.showTablet,
+.hideResize {
+    display: none;
+}
+
+/*----------------------------------------------------------------------------------------------------------------*\
+    MEDIA QUERIES
+\*----------------------------------------------------------------------------------------------------------------*/
+/* 320px */
+@media all and (min-width: 0px) {
+}
+
+/* 480px */
+@media all and (min-width: 480px) {
+    .hideMobile {
+        display: block;
+    }
+}
+
+/* 600px */
+@media all and (min-width: 600px) {
+}
+
+/* 768px */
+@media all and (min-width: 768px) {	
+    .row [class*="column-"] {
+        margin-right: 2%;
+        float: left;
+    }
+
+    .row .column-1 {
+        width: 6.5%;
+    }
+    
+    .row .column-2 {
+        width: 15%;
+    }
+    
+    .row .column-3 {
+        width: 23.5%;
+    }
+    
+    .row .column-4 {
+        width: 32%;
+    }
+    
+    .row .column-5 {
+        width: 40.5%;
+    }
+    
+    .row .column-6 {
+        width: 49%;
+    }
+    
+    .row .column-7 {
+        width: 57.5%;
+    }
+    
+    .row .column-8 {
+        width: 66%;
+    }
+    
+    .row .column-9 {
+        width: 74.5%;
+    }
+    
+    .row .column-10 {
+        width: 83%;
+    }
+    
+    .row .column-11 {
+        width: 91.5%;
+    }
+    
+    .row .column-12 {
+        width: 100%;
+        margin-right: 0;
+    }
+        
+    .showTablet {
+        display: block;
+    }
+}
+
+/* 980px */
+@media all and (min-width: 980px) {
+    .hideResize {
+        display: block;
+    }
+}
